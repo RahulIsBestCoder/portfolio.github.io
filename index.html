@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0"
+		/>
+		<link
+			rel="icon"
+			href="https://ik.imagekit.io/Rahul2023/portfoliowebsite/Icons/images.png?ik-sdk-version=javascript-1.4.3&updatedAt=1675922116825"
+			type="image/x-icon"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<script src="index.js"></script>
+		<title>Portfolio</title>
+	</head>
+	<body>
+		<div id="header" class="head">
+			<div class="container">
+				<nav>
+					<img
+						class="logo"
+						src="https://ik.imagekit.io/Rahul2023/portfoliowebsite/Icons/images.png?ik-sdk-version=javascript-1.4.3&updatedAt=1675922116825"
+						alt="logo"
+					/>
+					<ul class="ul" id="sidemenu">
+						<li><a class="list" href="#header">Home</a></li>
+						<li><a class="list" href="#about">About</a></li>
+						<li>
+							<a class="list" href="#services">Skills</a>
+						</li>
+						<li>
+							<a class="list" href="#about">Education</a>
+						</li>
+						<li></li>
+						<li>
+							<a class="list" href="#portfolio">My Work</a>
+						</li>
+						<li>
+							<img
+								onclick="closeMenu()"
+								src="https://ik.imagekit.io/Rahul2023/portfoliowebsite/Icons/Close-256.png?ik-sdk-version=javascript-1.4.3&updatedAt=1674569230469"
+								alt="close png"
+								id="close"
+							/>
+						</li>
+					</ul>
+					<img id='Mode' onclick="changeMode()" src="https://ik.imagekit.io/Rahul2023/portfoliowebsite/Icons/sun.png?ik-sdk-version=javascript-1.4.3&updatedAt=1675883291275" alt="Mode">
+
+					<img
+						onclick="openMenu()"
+						src="https://ik.imagekit.io/Rahul2023/portfoliowebsite/Icons/clipart365828.png?ik-sdk-version=javascript-1.4.3&updatedAt=1674568297656"
+						alt="menu Png"
+						id="menu"
+					/>
+				</nav>
+				<div class="headerText">
+					<p>Web-Developer</p>
+					<!-- here < br > is use to break the line into two lines-->
+					<h2>
+						Hi,I'm <span><i>Sougata Bauri</i></span>
+						<br />Kolkata,India
+					</h2>
+				</div>
+				<!-- --------------------------about section-------------- -->
+				<div id="about">
+					<div class="container">
+						<div class="row">
+							<div class="about-clm-1">
+								<img
+									src="https://ik.imagekit.io/Rahul2023/portfoliowebsite/oskar-yildiz-cOkpTiJMGzA-unsplash.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1674382481245"
+									alt="about image"
+								/>
+							</div>
+							<div class="about-clm-2">
+								<h1 class="sub-titles">About Me</h1>
+								<p>
+									<i
+										>An enthusiast techie desirous
+										to find the job position of a
+										Frontend as well as Backend
+										Developer to incorporate my
+										extensive knowledge of web
+										development, coding and
+										quality testing of software as
+										per clients’ requirements.</i
+									>
+								</p>
+								<div class="tab-titles">
+									<p
+										class="tablinks activelink"
+										onclick="openTab('Skills')"
+									>
+										Skills
+									</p>
+									<p
+										class="tablinks"
+										onclick="openTab('Experience')"
+									>
+										Experience
+									</p>
+									<p
+										class="tablinks"
+										onclick="openTab('Education')"
+									>
+										Education
+									</p>
+									<p
+										class="tablinks"
+										onclick="openTab('Projects')"
+									>
+										Projects
+									</p>
+								</div>
+								<div
+									class="tabcontents activeTab"
+									id="Skills"
+								>
+									<ul>
+										<li>
+											<span>FrontEnd</span
+											><br />Makeing Responsive
+											Frontend Designing<br />
+											HTML,CSS,Js,React
+										</li>
+										<li>
+											<span>Backend</span
+											><br />
+											Connecting DataBase to
+											frontend
+											<br />Nodejs,Nestjs,Typescript
+										</li>
+										<li>
+											<span>Database</span
+											><br />Making Apies and
+											Data manipulation
+											<br />Mongodb,NoSql
+										</li>
+									</ul>
+								</div>
+								<div
+									class="tabcontents"
+									id="Experience"
+								>
+									<ul>
+										<li>
+											<span
+												>Webapps Software
+												Solutions</span
+											><br />Backend Developer
+										</li>
+										<li>
+											<span>Frame Work</span
+											><br />Nodejs
+											,Nestjs,Typescript
+										</li>
+										<li>
+											<span
+												>Database-Query-Language</span
+											><br />NoSql-Mogodb
+										</li>
+										<li>
+											<span
+												>Miscellaneous </span
+											><br />Typescript
+											<br />Socket.io
+											<br />Jwt_authentication
+											<br />Deploying code to
+											server <br />Cdn(Content
+											Delivery Network)
+											<br />FireBase
+										</li>
+									</ul>
+								</div>
+								<div class="tabcontents" id="Education">
+									<ul>
+										<li>
+											<span>10th</span
+											><br />2011<br />B.N.S.N
+											<br />W.B.S.E
+										</li>
+										<li>
+											<span>Intermediate</span
+											><br />2015<br />B.N.S.N
+											<br />W.B.H.S.E
+										</li>
+										<li>
+											<span>Btech</span
+											><br />2015 - 2019<br />B.C.E.T<br />MAKAUT
+										</li>
+									</ul>
+								</div>
+								<div class="tabcontents" id="Projects">
+									<ul>
+										<li>
+											<span>My Bazar</span
+											><br />
+											Multi-vendor-Ecommers
+											React ,Html ,Css,
+											JavaScript,
+											Mongodb,Nodejs,Expressjs
+										</li>
+										<li>
+											<span>My Chat</span
+											><br />Chitchat,Messaging,Videocalling
+											<br />React,Html,Css,JavaScript,typescript,Nestjs,Mongodb,
+											Socket-io
+										</li>
+										<li>
+											<span
+												>Portfolio
+												Website</span
+											><br />Html,Css,JavaScript
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- ------------------------skills section------------- -->
+				<div id="services">
+					<div class="container">
+						<h1 class="sub-titles">Skills</h1>
+						<div class="servicesList">
+							<div>
+								<i
+									><img
+										style="
+											height: 20px;
+											width: 20px;
+										"
+										src="https://ik.imagekit.io/Rahul2023/portfoliowebsite/Icons/crop-xxl.png?ik-sdk-version=javascript-1.4.3&updatedAt=1674483324613"
+										alt=""
+								/></i>
+								<h2>Frontend</h2>
+								<p>
+									Frame works and Languages:-
+									<br />
+									HTML , CSS, Js, React
+								</p>
+								<a href="#">Learn more...</a>
+							</div>
+							<div>
+								<i
+									><img
+										style="
+											height: 20px;
+											width: 20px;
+										"
+										src="https://ik.imagekit.io/Rahul2023/portfoliowebsite/Icons/code-xxl.png?ik-sdk-version=javascript-1.4.3&updatedAt=1674483324594"
+										alt=""
+								/></i>
+								<h2>Backend</h2>
+								<p>
+									Frame works:- <br />
+									Nodejs,Nestjs,Typescript
+								</p>
+								<a href="#">Learn more...</a>
+							</div>
+							<div>
+								<i
+									><img
+										style="
+											height: 20px;
+											width: 20px;
+										"
+										src="https://ik.imagekit.io/Rahul2023/portfoliowebsite/Icons/notebook-xxl.png?ik-sdk-version=javascript-1.4.3&updatedAt=1674483930403"
+										alt=""
+								/></i>
+								<h2>Database</h2>
+								<p>
+									Nosql:- <br />
+									Mongodb
+								</p>
+								<a href="#">Learn more...</a>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!-- -------------------portfolio section-------- -->
+				<div id="portfolio">
+					<div class="container">
+						<h1 class="sub-titles">My Work</h1>
+						<div class="worklist">
+							<div class="work">
+								<img
+									id="img1"
+									src="https://ik.imagekit.io/Rahul2023/portfoliowebsite/kevin-ku-w7ZyuGYNpRQ-unsplash.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1674382473160"
+									alt="Work img"
+								/>
+								<div class="layer">
+									<h3>Social Media</h3>
+									<p>
+										Lorem ipsum dolor, sit amet
+										consectetur adipisicing elit.
+										A, officia?
+									</p>
+									<a href="#">
+										<img
+											src="https://ik.imagekit.io/Rahul2023/portfoliowebsite/Icons/external-link-icon-Image-by-Hardisha.com_.png?ik-sdk-version=javascript-1.4.3&updatedAt=1674547148948"
+											alt=""
+										/>
+									</a>
+								</div>
+							</div>
+							<div class="work">
+								<img
+									src="https://ik.imagekit.io/Rahul2023/portfoliowebsite/arnold-francisca-f77Bh3inUpE-unsplash.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1674382477228"
+									alt="Work img"
+								/>
+								<div class="layer">
+									<h3>Ecommerce App</h3>
+									<p>
+										Lorem ipsum dolor, sit amet
+										consectetur adipisicing elit.
+										A, officia?
+									</p>
+									<a href="#">
+										<img
+											src="https://ik.imagekit.io/Rahul2023/portfoliowebsite/Icons/external-link-icon-Image-by-Hardisha.com_.png?ik-sdk-version=javascript-1.4.3&updatedAt=1674547148948"
+											alt=""
+										/>
+									</a>
+								</div>
+							</div>
+							<div class="work">
+								<img
+									src="https://ik.imagekit.io/Rahul2023/portfoliowebsite/App-development-process-Feature-image.jpg?ik-sdk-version=javascript-1.4.3&updatedAt=1674502781645"
+									alt="Work img"
+								/>
+								<div class="layer">
+									<h3>Music App</h3>
+									<p>
+										Lorem ipsum dolor, sit amet
+										consectetur adipisicing elit.
+										A, officia?
+									</p>
+									<a href="#">
+										<img
+											src="https://ik.imagekit.io/Rahul2023/portfoliowebsite/Icons/external-link-icon-Image-by-Hardisha.com_.png?ik-sdk-version=javascript-1.4.3&updatedAt=1674547148948"
+											alt=""
+										/>
+									</a>
+								</div>
+							</div>
+						</div>
+						<a href="#" class="btn">See more...</a>
+					</div>
+				</div>
+				<!-- ---------------------------contact------------------- -->
+				<div id="contact">
+					<div class="container">
+						<div class="row">
+							<div class="contactLeft">
+								<h1>Contact Me</h1>
+								<h1 class="subtitle"></h1>
+								<p>
+									<img
+										style="
+											height: 25px;
+											width: 25px;
+										"
+										src="https://ik.imagekit.io/Rahul2023/portfoliowebsite/Icons/clipart2363582.png?ik-sdk-version=javascript-1.4.3&updatedAt=1674558393052"
+										alt=""
+									/>rahulbauri16@mail.com
+								</p>
+								<p>
+									<img
+										style="
+											height: 25px;
+											width: 25px;
+										"
+										src="https://ik.imagekit.io/Rahul2023/portfoliowebsite/Icons/-916104889894t46gwjx64.png?ik-sdk-version=javascript-1.4.3&updatedAt=1674558278382"
+										alt=""
+									/>99xxxxxx07
+								</p>
+								<div class="socialIcons">
+									<a
+										target="_blank"
+										href="https://www.facebook.com/rahul.bauri1/"
+									>
+										<img
+											style="
+												height: 25px;
+												width: 25px;
+											"
+											src="https://ik.imagekit.io/Rahul2023/portfoliowebsite/Icons/Facebook_icon.svg.webp?ik-sdk-version=javascript-1.4.3&updatedAt=1674552680836"
+											alt=""
+										/>
+									</a>
+									<a
+										target="_blank"
+										href="https://www.linkedin.com/in/sougata-bauri-aa611420b/"
+									>
+										<img
+											style="
+												height: 25px;
+												width: 25px;
+											"
+											src="https://ik.imagekit.io/Rahul2023/portfoliowebsite/Icons/LinkedIn_icon.svg.png?ik-sdk-version=javascript-1.4.3&updatedAt=1674553185043"
+											alt=""
+										/>
+									</a>
+									<a
+										target="_blank"
+										href="https://github.com/RahulIsBestCoder"
+									>
+										<img
+											style="
+											    background-color: black;
+												height: 25px;
+												width: 25px;
+												border: 0.05mm solid
+													wheat;
+												border-radius: 5px;
+											"
+											src="https://ik.imagekit.io/Rahul2023/portfoliowebsite/Icons/github.png?ik-sdk-version=javascript-1.4.3&updatedAt=1674553527516"
+											alt=""
+										/>
+									</a>
+								</div>
+								<a
+									id="cv"
+									target="_blank"
+									class="btn"
+									href="https://ik.imagekit.io/Rahul2023/MyCv/Frontend_dveloper_Resume_2.pdf?ik-sdk-version=javascript-1.4.3&updatedAt=1674560453361"
+									>Download Cv</a
+								>
+							</div>
+							<div class="contactRight">
+								<form name="myForm" onsubmit="return submitForm()">
+									<input
+										type="text"
+										id="name"
+										name="name"
+										placeholder="Your name"
+										required
+									/>
+									<input
+										type="text"
+										id="mail"
+										name="email"
+										placeholder="email"
+										required
+									/>
+									<textarea
+										name="message"
+										id="message"
+										cols="15"
+										rows="10"
+										placeholder="message"
+										required
+									></textarea>
+									<p id="success">Thanks for contacting us. We will reach you shortly😊</p>
+									<button
+										id="submit"
+										type="submit"
+										class="btn"
+										onclick="subMit()"
+									>
+										Submit
+									</button>
+								</form>
+							</div>
+						</div>
+					</div>
+					<div class="copyRight">
+						Copyright © 2021 Sougata Bauri. All rights
+						reserved.
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

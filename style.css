@@ -1,0 +1,485 @@
+* {
+	padding: 0;
+	margin: 0;
+	font-family: "Poppins", sans-serif;
+	box-sizing: border-box;
+}
+:root{
+    --primaryColor:#080808;
+    --secondaryColor:#ffff;
+    --thirdColor:rgb(139, 100, 139);
+    --themeColor:rgb(248, 64, 8);
+}
+html{
+    scroll-behavior: smooth;
+}
+body {
+    transition: 0.3s;
+	background-color:var(--primaryColor);
+	color:var(--secondaryColor);
+}
+body.day{
+    transition: 0.3s;
+    --primaryColor:#fff;
+    --secondaryColor:#000;
+}
+
+#header {
+	width: 100%;
+	height: 100vh;
+	background-image: url("https://ik.imagekit.io/Rahul2023/portfoliowebsite/20220930_230339__1_.png?ik-sdk-version=javascript-1.4.3&updatedAt=1674405711893");
+    /* background-size: cover; */
+	background-position: center;
+    background-repeat: no-repeat;
+}
+.container {
+	/* 10px from up down 10% from sides */
+	padding: 10px 25px;
+}
+.logo {
+	height: 70px;
+	width: 70px;
+ }
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+nav ul{
+    flex: 1;
+    text-align: right;
+    margin-left: 500px;
+}
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 15px;
+}
+
+nav ul li a{
+    /* background-color:#080808 ; */
+    color:var(--secondaryColor);
+    text-decoration: none;
+    font-size: 15px;
+    /* postion reletive to li*/
+    position: relative;
+    /* transition: .3s; */
+}
+/*this section is to show hover efect from- nav ul li a::after -to- nav ul li a*/
+/* using :: after and before as a replacement of adding h1 p or div element in html */
+ nav ul li a::after{
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: var(--themeColor) ;
+    /* position absolute to anchore tag*/
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+/*to use this hover effect comment- nav ul li a:hover::after  and uncomment backclour of    */
+/* nav ul li a:hover{
+    background-color: red;
+    transition: .5 sec;
+    
+} */
+/* ater elemnt of a tag will appear while hover a:hover::after is used*/
+nav ul li a:hover::after{
+    width:100%;
+}
+.headerText{
+    margin-top: 25%;
+    font-size: 20px;
+}
+.headerText span{
+color: var(--thirdColor);
+}
+#Mode{
+    padding: 2px;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+}
+#Mode:hover{
+transition: .3s;
+border: 5px solid var(--themeColor);
+border-radius: 50%;
+
+}
+
+/* ------------------about section ----- */
+#about{
+    margin: 150px 0px 0px 0px;
+    padding: 50px 0;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+.about-clm-1{
+    flex-basis: 35%;
+}
+.about-clm-1 img{
+    width: 100%;
+    border-radius: 10%;
+}
+.about-clm-2{
+    flex-basis: 55%;
+}
+.sub-titles{
+    color:var(--thirdColor);
+
+}
+.tab-titles{
+    display: flex;
+    margin: 20px  40px;
+    padding: 10px;
+}
+.tablinks{
+
+    margin-right:50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+
+}
+.tablinks::after{
+    content:'';
+    width:0;
+    height:2px;
+    background: var(--themeColor);
+    position: absolute;
+    left:0;
+    bottom: -0px;
+    transition: 0.5s;
+
+}
+.tablinks.activelink::after{
+    width:70%;
+}
+.tabcontents ul li {
+    list-style: none;
+    margin: 10px 0;
+}
+.tabcontents ul li span{
+    color: var(--thirdColor);
+    font-size: 15px;
+
+}
+.tabcontents{
+    display: none;
+}
+.tabcontents.activeTab{
+    display: block;
+}
+/* ------------------------skills sections----------- */
+.servicesList{
+    display: grid;
+    grid-template-columns: 
+    repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.servicesList div{
+    border-radius: 5px;
+    background-color: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+}
+.servicesList div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom:15px;
+}
+.servicesList div a{
+    text-decoration: none;
+    color:var(--secondaryColor);
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.servicesList div:hover{
+    background-color:var(--themeColor) ;
+    /* moving the box by 8px**/
+    transform: translateY(-8px);
+    transition: .5s;
+}
+#portfolio{
+    padding: 50px 0;
+
+}
+.work{
+position: relative;
+overflow: hidden;
+border-radius: 8px;
+}
+.work img{
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: transform 0.5s;
+}
+.worklist{
+    display: grid;
+    grid-template-columns: 
+    repeat(auto-fit, minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+
+}
+.work a img{
+    height: 35px;
+    width: 40px;
+    border-radius: 50%;
+}
+.layer{
+    height: 0;
+    width: 100%;
+    /*using gradient layer over div*/
+    background:linear-gradient(rgba(0,0,0,0.6),rgb(248, 64, 8));
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: 14px;
+    transition: height 1s;
+}
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer a{
+    margin-top: 20px;
+    color: var(--themeColor);
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+.work:hover img{
+ transform: scale(1.1);
+
+}
+.work:hover .layer{
+    height:100%;
+}
+#cv{
+    width: 30%;
+}
+.container .btn{
+    width: 10%;
+    background-color: #444444;
+    margin: 50px auto;
+    padding: 10px 0;
+    display: block;
+    border: 1px solid var(--themeColor) ;
+    border-radius: 6px;
+    text-decoration: none;
+    text-align: center;
+    color:white;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.container .btn:hover{
+    background: var(--themeColor) ;
+}
+/* ------------------------contact------------------ */
+.contactLeft{
+    flex-basis:35%;
+     
+}
+.contactLeft p{
+    margin-top: 30px;
+}
+.contactLeft p img{
+    border-radius: 50%;
+    margin-right: 10px;
+    font-size: 25px;
+}
+.socialIcons{
+    margin-top: 30px;
+}
+.socialIcons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    display: inline-block;
+    transition: .3s;
+}
+.socialIcons a:hover{
+    height: 70%;
+    transform: translateY(-10px) ;
+}
+.contactRight{
+    flex-basis:60%;
+}
+.contactRight form{
+    width: 100%;
+}
+ form input,form textarea{
+    width: 100%;
+    outline: none;
+    background: rgb(49, 49, 49);
+    padding: 15px;
+    margin: 15px 0;
+    color:var(--primaryColor);;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form btn2{
+    width: 100%;
+    padding: 14px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+#success{
+    text-align: center;
+    display: none;
+}
+.copyRight{
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    font-weight: 300;
+    margin-top:20px;
+
+}
+/* *********************Responsiveness************** */
+nav img{
+    height: 0;
+    width:0;
+}
+nav ul img{
+    height: 0;
+    width: 0;
+}
+
+
+@media only screen and (max-width:600px){
+    #header{
+        background-image: url('https://ik.imagekit.io/Rahul2023/portfoliowebsite/potrait.png?ik-sdk-version=javascript-1.4.3&updatedAt=1674564387215');
+    }
+    nav img{
+        height: 20px;
+        width:20px;
+    }
+    nav ul img{
+        height: 20px;
+        width: 20px;
+    }
+    .headerText{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .headerText h1{
+        font-size: 30px;
+    }
+    nav img{
+        height: 20px;
+        width: 20px;
+        display: block;
+     }
+     .about-clm-1, .about-clm-2{
+        flex-basis: 100%;
+     }
+     .sub-titles{
+        font-size: 40px;
+
+     }
+    .about-clm-2{
+        font-size: 12px;
+    }
+    .tab-titles {
+        margin: 2px;
+        text-align: center;
+    }
+    .tab-titles .tablinks{
+        font-size: 15px;
+        margin-right: 10px ;
+        padding: 1px;
+    }
+
+    .headerText{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    nav .ul{
+        background-color:var(--themeColor);
+        position: fixed;
+        top: 0;
+        /*to hide the side navbar rigth is -200px as width is 200px*/
+        right: -200px;
+        width: 200px;
+        height: 100%;
+        padding-top: 50px;
+        transition: 0.6s;
+        z-index: 100;
+
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul img{
+        height: 20px;
+        width: 20px;
+        display: block;
+        position: absolute;
+        top: 25px;
+        left:25px;
+        z-index: 100;
+        cursor: pointer;
+    }
+    .servicesList div{
+        border: .5px solid white;
+        
+    }
+    .container .btn{
+        width: 40%;
+    }
+    .row{
+        justify-content: center;
+    }
+    .socialIcons a{
+        width: 40vh;
+    }
+    #cv{
+        width: 65%;
+    }
+    .about-clm-1 img{
+        margin-top: 110px;
+    }
+    .contactRight {
+        flex-basis: 100%;
+    }
+    #message{
+        height: 100px;
+    }
+    .contactLeft h1{
+        font-size: 30px;
+    }
+    
+    .socialIcons a{
+        margin: 15px;
+        width: 10px;
+    }
+    .socialIcons a img{
+        margin: 10px;
+    }
+    
+}
