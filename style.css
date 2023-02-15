@@ -4,6 +4,17 @@
 	font-family: "Poppins", sans-serif;
 	box-sizing: border-box;
 }
+::-webkit-scrollbar {
+	width: 10px;
+	background: linear-gradient(rgba(0, 0, 0, 0), rgb(248, 64, 8));
+}
+::-webkit-scrollbar-thumb {
+	background: rgb(248, 64, 8);
+}
+::-webkit-scrollbar-thumb:hover {
+	border: 1px solid black;
+	background: rgb(156, 47, 138);
+}
 :root{
     --primaryColor:#080808;
     --secondaryColor:#ffff;
